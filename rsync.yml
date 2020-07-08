@@ -1,0 +1,12 @@
+---
+-name:rsync file to another directory
+hosts:myservers
+user:testuser
+sudo:yes
+tasks:
+-name:copy
+shell: |
+mkdir -p /dir2 && rsync -ar dir1/ dir2
+
+
+
